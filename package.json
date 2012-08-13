@@ -1,0 +1,19 @@
+{
+  "author": "Todd Larsen <toddlar@gmail.com>",
+  "name": "www",
+  "description": "Main site for DevPath",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DevPath/www.git"
+  },
+  "dependencies": {
+    "coffee-script": "~1.3.3",
+    "stylus": "~0.28.2"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
