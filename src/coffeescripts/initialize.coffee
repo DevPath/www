@@ -1,4 +1,4 @@
 window.DevPath ||= {}
 
-require ['header'], (Header) ->
-  console.log hello
+require ['header'], (HeaderView) ->
+  header = new HeaderView
