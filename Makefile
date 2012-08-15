@@ -2,7 +2,7 @@ setup :
 		npm install
 
 build :
-		./env.sh stylus  src/stylesheets/ --out public
+		./env.sh stylus src/stylesheets/ --out public
 		./env.sh coffee --compile --output public src/coffeescripts
 
 watch-coffeescript :
