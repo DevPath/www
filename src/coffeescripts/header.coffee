@@ -13,4 +13,8 @@ define ->
       @$('nav a').removeClass('current')
       $navLink.addClass('current')
 
+    navigateByIndex: (navIndex) ->
+      $navLink = $(@$('nav a')[navIndex])
+      @navigate($navLink)
+
   HeaderView
