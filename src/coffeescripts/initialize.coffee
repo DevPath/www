@@ -1,3 +1,4 @@
-->
-  console.log 'hello world'
-  console.log 'again'
+window.DevPath ||= {}
+
+require ['header'], (Header) ->
+  console.log hello
