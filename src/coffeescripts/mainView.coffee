@@ -6,39 +6,53 @@ define ->
       'scroll': 'scrolling'
 
     initialize: ->
-      @currentArticleIndex = 0
-      offset = $('header').outerHeight()
+      @setArticlePositions()
+      @findCurrentArticleIndex()
+      $(window).scroll =>
+        @scrolling()
+      DevPath.header.navigateByIndex(@currentArticleIndex)
+
+    findCurrentArticleIndex: ->
+      scrollTop = $(window).scrollTop()
+      for articleTop, i in @tops
+        if articleTop > scrollTop
+          @currentArticleIndex = i - 1
+          return
+      @currentArticleIndex = @tops.length - 1
+
+    setArticlePositions: ->
       @tops = []
       @bottoms = []
       _.each @$('article'), (article) =>
-        @tops.push $(article).position().top - offset
-        @bottoms.push $(article).position().top + $(article).outerHeight() - offset
-      $(window).scroll =>
-        @scrolling()
+        articleTop = $(article).position().top
+        articleHeight = $(article).outerHeight()
+        @tops.push(@offset(articleTop))
+        @bottoms.push(@offset(articleTop + articleHeight))
 
     scrolling: ->
       unless @blockScrolling
         @blockScrolling = true
-        $window = $(window)
-        scrollTop = $window.scrollTop()
-        if @scrolledDown(scrollTop)
-          @currentArticleIndex == ++@currentArticleIndex
+        if @scrolledDown()
+          @currentArticleIndex = ++@currentArticleIndex
           DevPath.header.navigateByIndex(@currentArticleIndex)
-        if @scrolledUp(scrollTop)
-          @currentArticleIndex == --@currentArticleIndex
+        if @scrolledUp()
+          @currentArticleIndex = --@currentArticleIndex
           DevPath.header.navigateByIndex(@currentArticleIndex)
         @blockScrolling = false
 
-    scrolledDown: (currentTop) ->
-      currentTop > @tops[@currentArticleIndex + 1]
+    scrolledDown: ->
+      $(window).scrollTop() > @tops[@currentArticleIndex + 1]
 
-    scrolledUp: (currentTop) ->
-      currentTop < @bottoms[@currentArticleIndex - 1]
+    scrolledUp: ->
+      $(window).scrollTop() < @bottoms[@currentArticleIndex - 1]
 
     scrollToArticle: (articleIndex) ->
-      scrollY = @tops[articleIndex] + 10
+      scrollY = @tops[articleIndex]
       @blockScrolling = true
       $('body').animate {scrollTop: scrollY}, =>
         @blockScrolling = false
+
+    offset: (position) ->
+      parseInt(position - $('header').outerHeight())
 
   MainView
