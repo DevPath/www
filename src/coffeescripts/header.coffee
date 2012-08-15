@@ -7,7 +7,10 @@ define ->
 
     navClick: (e) ->
       e.preventDefault()
-      @navigate($(e.currentTarget))
+      $navLink = $(e.currentTarget)
+      @navigate($navLink)
+      navIndex = @$('nav a').index($navLink)
+      DevPath.mainView.scrollToArticle(navIndex)
 
     navigate: ($navLink) ->
       @$('nav a').removeClass('current')
