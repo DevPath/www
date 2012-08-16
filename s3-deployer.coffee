@@ -11,12 +11,12 @@ deploy = {}
 module.exports = deploy
 
 deploy.dir = (path) ->
-  @traverseDir path, (err, paths) =>
+  @read path, (err, paths) =>
     if err then throw err
     @upload paths
 
 
-deploy.traverseDir = (dir, cb) ->
+deploy.read = (dir, cb) ->
   results = []
 
   fs.readdir dir, (err, list) ->
@@ -29,7 +29,7 @@ deploy.traverseDir = (dir, cb) ->
       file = "#{dir}/#{file}"
       fs.stat file, (err, stat) ->
         if stat and stat.isDirectory()
-          deploy.traverseDir file, (err, res) ->
+          deploy.read file, (err, res) ->
             results = results.concat res
             next()
         else
