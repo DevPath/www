@@ -1,6 +1,9 @@
 setup :
 		npm install
 
+watch :
+		./env.sh wach -e public/*.* make build
+
 build :
 		rm -rf public && mkdir public
 		./env.sh stylus src/stylesheets/ --out public
