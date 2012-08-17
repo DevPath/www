@@ -2,7 +2,7 @@ setup :
 		npm install
 
 watch :
-		./env.sh wach -e public/*.* make build
+		./env.sh wach -o src/**/*, make build
 
 build :
 		rm -rf public && mkdir public
