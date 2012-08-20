@@ -1,10 +1,6 @@
 setup :
 		npm install
 
-watch :
-		make build
-		./env.sh wach -o src/**/*, make build
-
 build :
 		rm -rf public && mkdir public
 		cp src/vendor/*.js public/
@@ -13,9 +9,10 @@ build :
 		./env.sh coffee template
 
 server :
-		make build
-		./env.sh http-server public/
+		make build && ./env.sh http-server public/
+
+watch :
+		make build && ./env.sh wach -o src/**/*, make build
 
 deploy :
-		make build
-		./env.sh coffee deploy
+		make build && ./env.sh coffee deploy
