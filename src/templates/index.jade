@@ -3,83 +3,96 @@ html
 head
   title DevPath Chicago
   link(rel='stylesheet', href='/style.css')
-  script(src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js')
-  script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery-1.8.0.min.js')
-  script(src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js')
-  script(src='http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js')
+  script(src='/modernizr.min.js')
+  script(src='/jquery-1.8.0.min.js')
+  script(src='/underscore.min.js')
+  script(src='/backbone.min.js')
   script(src='http://cdnjs.cloudflare.com/ajax/libs/require.js/0.26.0/require.min.js', data-main='initialize')
 
 body
   header
     .container
       a#logo
+        small ~>
         span DevPath
+        u &nbsp;
 
       nav
-        a Who
-        a What
-        a Where
-        a When
-        a Why
+        a.current Overview
+        a Structure
+        a Principles
 
   section#main
     article
-      h1 0 The Who
-      | Accusamus cupidatat ea mlkshk. Pariatur pop-up 3 wolf moon kogi, fanny pack deserunt
-      | godard Austin ethical beard bespoke bicycle rights. Organic occupy esse, tofu
-      | pitchfork deserunt lo-fi single-origin coffee voluptate scenester iphone vinyl. Irure
-      | thundercats occaecat, lo-fi fap sed bushwick photo booth yr tofu carles skateboard
-      | twee. Incididunt messenger bag elit, ex williamsburg excepteur fugiat aliqua seitan
-      | cliche sapiente ea marfa post-ironic vinyl. American apparel brunch in sriracha
-      | locavore, art party leggings raw denim pickled food truck ex nesciunt you probably
-      | haven't heard of them bicycle rights vegan. Labore american apparel pinterest, est
-      | cray banksy terry richardson voluptate nesciunt direct trade.
+      h1
+        a Get on the path&nbsp;
+        span to becoming a professional web developer.
 
-    article
-      h1 1 The What
-      | Accusamus cupidatat ea mlkshk. Pariatur pop-up 3 wolf moon kogi, fanny pack deserunt
-      | godard Austin ethical beard bespoke bicycle rights. Organic occupy esse, tofu
-      | pitchfork deserunt lo-fi single-origin coffee voluptate scenester iphone vinyl. Irure
-      | thundercats occaecat, lo-fi fap sed bushwick photo booth yr tofu carles skateboard
-      | twee. Incididunt messenger bag elit, ex williamsburg excepteur fugiat aliqua seitan
-      | cliche sapiente ea marfa post-ironic vinyl. American apparel brunch in sriracha
-      | locavore, art party leggings raw denim pickled food truck ex nesciunt you probably
-      | haven't heard of them bicycle rights vegan. Labore american apparel pinterest, est
-      | cray banksy terry richardson voluptate nesciunt direct trade.
+      img(src='http://placehold.it/500x300', class='right')
 
-    article
-      h1 2 The Where
-      | Accusamus cupidatat ea mlkshk. Pariatur pop-up 3 wolf moon kogi, fanny pack deserunt
-      | godard Austin ethical beard bespoke bicycle rights. Organic occupy esse, tofu
-      | pitchfork deserunt lo-fi single-origin coffee voluptate scenester iphone vinyl. Irure
-      | thundercats occaecat, lo-fi fap sed bushwick photo booth yr tofu carles skateboard
-      | twee. Incididunt messenger bag elit, ex williamsburg excepteur fugiat aliqua seitan
-      | cliche sapiente ea marfa post-ironic vinyl. American apparel brunch in sriracha
-      | locavore, art party leggings raw denim pickled food truck ex nesciunt you probably
-      | haven't heard of them bicycle rights vegan. Labore american apparel pinterest, est
-      | cray banksy terry richardson voluptate nesciunt direct trade.
+      p
+        | Build features for web applications in a <em>team-based</em> agile environment from a <em>full-stack</em> perspective.<br>
+        | <em>Bi-weekly sessions</em> are modeled after what it's really like to work as a web developer.
+        | We'll work on both hard and soft skills like:
 
-    article
-      h1 3 The When
-      | Accusamus cupidatat ea mlkshk. Pariatur pop-up 3 wolf moon kogi, fanny pack deserunt
-      | godard Austin ethical beard bespoke bicycle rights. Organic occupy esse, tofu
-      | pitchfork deserunt lo-fi single-origin coffee voluptate scenester iphone vinyl. Irure
-      | thundercats occaecat, lo-fi fap sed bushwick photo booth yr tofu carles skateboard
-      | twee. Incididunt messenger bag elit, ex williamsburg excepteur fugiat aliqua seitan
-      | cliche sapiente ea marfa post-ironic vinyl. American apparel brunch in sriracha
-      | locavore, art party leggings raw denim pickled food truck ex nesciunt you probably
-      | haven't heard of them bicycle rights vegan. Labore american apparel pinterest, est
-      | cray banksy terry richardson voluptate nesciunt direct trade.
+      ul
+        li distilling tech specs from product requests
+        li TDD
+        li code reviews
+        li pair programming
+        li front end development
+        li workflow optimizations
+
+
+      p.clear
+      | You'll gain new perspectives, programming skills, interview coaching, a Github fork of all your work to show off during your job interviews, and experiences that even we can't predict.
+      | You'll learn how to work on an efficient development team solving real problems and gain a programming philosophy that will carry you long into your web development career.
+
 
 
     article
-      h1 4 The Why
-      | Accusamus cupidatat ea mlkshk. Pariatur pop-up 3 wolf moon kogi, fanny pack deserunt
-      | godard Austin ethical beard bespoke bicycle rights. Organic occupy esse, tofu
-      | pitchfork deserunt lo-fi single-origin coffee voluptate scenester iphone vinyl. Irure
-      | thundercats occaecat, lo-fi fap sed bushwick photo booth yr tofu carles skateboard
-      | twee. Incididunt messenger bag elit, ex williamsburg excepteur fugiat aliqua seitan
-      | cliche sapiente ea marfa post-ironic vinyl. American apparel brunch in sriracha
-      | locavore, art party leggings raw denim pickled food truck ex nesciunt you probably
-      | haven't heard of them bicycle rights vegan. Labore american apparel pinterest, est
-      | cray banksy terry richardson voluptate nesciunt direct trade.
+      h2 Structure
+      p DevPath is kicking off with a trial 1 month program. Team members can expect to take away:
+
+      h3 Outcomes
+      ul
+        li An updated resume
+        li An active Github profile
+        li A mock interview
+        li Communication and personal branding practice
+        li Portfolio work
+
+      h3 Environment
+      ul
+        li job-like combined with teaching moments by Todd and Geoff
+        li Progress tracking
+        li homework
+        li centered around code quality and peer reviews
+        li Open Source workflow and ideals
+
+      h3 Classroom Tools
+      ul
+        li Github for version control
+        li Github for issue management
+
+      h3 Logistics
+      ul
+        li 3 hours / session
+        li 2 sessions / week <small>(Tuesdays and Thursdays, 6pm - 9pm)</small>
+        li $100 / week
+        li @CatapultChi
+
+    article
+      h2 Principles
+      p We'll use the DevPath set of principles to guide our work sessions in an organic way:
+      ul
+        li Name things precisely.
+        li Test small units and integration.
+        li Don't repeat yourself.
+        li Modularize code and directory structure
+        li The Best Solution always wins
+        li Refactor don't rewrite
+        li Be explicit over implicit.
+        li Pair programming is invaluable.
+
+footer
