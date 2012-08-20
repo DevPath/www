@@ -4,10 +4,8 @@ Development of this codebase requires node.js. [Install it](http://nodejs.org/di
 
 ```make setup``` to install the dependencies.
 
-```make build``` to compile CoffeeScript and Stylus.
+```make build``` to compile the latest site from the```.coffee```, ```.styl``` and ```jade``` files.
 
-```make watch-coffeescript``` to start the CoffeeScript watcher to compile on file change.
+```make watch``` to compile on file change during development.
 
-``` make watch-stylus``` to start the Stylus watcher to compile on file change.
-
-``` make deploy``` to deploy to S3.
+``` make deploy``` to deploy the static site in ```public/``` S3.

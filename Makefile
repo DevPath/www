@@ -1,15 +1,14 @@
 setup :
 		npm install
 
+watch :
+		./env.sh wach -o src/**/*, make build
+
 build :
+		rm -rf public && mkdir public
 		./env.sh stylus src/stylesheets/ --out public
 		./env.sh coffee --compile --output public src/coffeescripts
-
-watch-coffeescript :
-		./env.sh coffee --watch --compile --output public src/coffeescripts
-
-watch-stylus :
-		./env.sh stylus src/stylesheets/ -w --out public
+		./env.sh coffee template
 
 deploy :
 		./env.sh coffee deploy
