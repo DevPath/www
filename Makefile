@@ -17,4 +17,5 @@ server :
 		./env.sh http-server public/
 
 deploy :
+		make build
 		./env.sh coffee deploy

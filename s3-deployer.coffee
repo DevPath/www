@@ -42,5 +42,6 @@ deploy.upload = (paths) ->
     splitFileName = path.split '/'
     fileName = splitFileName[splitFileName.length - 1]
     client.putFile path, "/#{fileName}", (err, res) ->
+      console.log 'error putting', path, "/#{fileName}"
       if err then throw err
       console.log "Deployed #{path}"
