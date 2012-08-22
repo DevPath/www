@@ -6,6 +6,8 @@ Development of this codebase requires node.js. [Install it](http://nodejs.org/di
 
 ```make build``` to compile the latest site from the```.coffee```, ```.styl``` and ```jade``` files.
 
+```make server``` to create a development server at ```localhost:8080```
+
 ```make watch``` to compile on file change during development.
 
 ``` make deploy``` to deploy the static site in ```public/``` S3.

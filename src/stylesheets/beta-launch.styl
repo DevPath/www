@@ -1,0 +1,103 @@
+// Color palette: http://www.colourlovers.com/palette/38562/Hands_On
+
+header-height = 90px
+page-width = 960px
+
+@-webkit-keyframes blinker
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+
+.clear
+  clear both
+
+body
+  background #eee
+  font-family Helvetica, Arial, sans-serif
+  color #353432
+
+  > header
+    position fixed
+    top 0
+    width 100%
+    height header-height
+    background #353432
+    border-bottom 3px solid #94BA65
+    box-shadow 0 10px 30px #ddd
+
+    .container
+      width page-width
+      margin 0 auto
+
+    #logo
+      font-size 4em
+      color #4E4D4A
+      display inline-block
+      margin-top 15px
+      font-family monospace
+      text-transform uppercase
+
+      small
+        font-weight bold
+
+      u
+        -webkit-animation-name blinker
+        -webkit-animation-iteration-count infinite
+        -webkit-animation-timing-function cubic-bezier(1.0,0,0,1.0)
+        -webkit-animation-duration 1.5s
+
+    nav
+      margin-top: 40px
+      float: right
+      a
+        margin-left: 30px
+        color #4E4D4A
+        cursor pointer
+        font-weight normal
+        transition: opacity 1s ease-in-out
+        font-weight bold
+        opacity 1
+        &:hover
+          color #ccc
+          opacity 0.6
+
+      a.current
+        color #999
+
+
+#main
+  width page-width
+  background white
+  clear both
+  margin header-height auto 0
+  padding-top 30px
+
+  article
+    padding: 30px
+    line-height: 25px
+
+    a
+       color #94BA65
+
+    h1
+      font-size 2em
+      color #353432
+      margin-bottom 40px
+
+    h2
+      font-size 1.6em
+
+    p
+      em
+        font-weight bold
+
+    ul
+      margin 20px 0 0 30px
+      li
+        list-style-type disc
+
+    .right
+      float right
+      margin 0 0 30px 20px
+
+footer
+  height 500px
